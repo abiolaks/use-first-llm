@@ -1,7 +1,8 @@
 # This file will serve a wrapper for the GPT-2 model. It will be used to generate text based on the input prompt.
 from openai import OpenAI
+import streamlit as st
 
-api_key = "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"
+api_key = st.secrets["api_key"]
 
 # Create a client
 client = OpenAI(api_key=api_key)
